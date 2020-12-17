@@ -1,0 +1,154 @@
+#page-landing {
+  /*pagina inicial*/
+  background: linear-gradient(
+    329.54deg,
+    #29b6d1 0%,
+    #00c7c7 100%
+  ); /* cada definição entre virgulas, dentro da função é denominada "argumento". */
+
+  text-align: center;
+  min-height: 100vh; /*altura minima:*/
+  /*exibição/tela: */
+  display: flex; /*Quebra a força do "display: bloc" para permitir outras forma de alinhamento ou posicionamento de "caixas" que esteja dentro de outra caixa*/
+  /*align-items: center; alinha somente na altura/vertical.... sem o "display: flex" o "align-items: center;" não funciona*/
+}
+
+#container {
+  
+  /*esta é a "caixa" maior*/
+  margin: 0; /*cria automaticamente, um espaço de igualdade nas 4 "margens, podendo as vezes, funcionar apenas no "top-superior" e no "bottom-inferior*/
+  
+  width: min(
+    90%,
+    112rem
+  ); /*reestudar até entender*/ /*largura. 90%*, é a parte utilizada. o que implica numa sobra de 10% total com 5% para cada lado da caixa <>  o "rem" aqui, sera sempre proporcionlmente subordinado ao valor do font-size: do ":root da pagina "main.css"... se este rem for trocdo por px, a sicronização entre este "width e o font-size: do :root" perdera a proporcionalidade.*/
+  
+  
+}
+
+.location,
+h1,
+.visit p {
+  /*agrupamento de elementos*/
+  height: 16vh; /*altura. o "vh" significa "viewpor height"- altura da janela */
+}
+
+#logo {
+  animation-delay: 50ms;
+}
+
+.location {
+  animation-delay: 1s;
+}
+
+main h1 {
+  animation-delay: 150ms;
+  font-size: clamp(4rem, 8vw, 8.4rem);
+}
+
+.visit p {
+  animation-delay: 200ms;
+}
+
+.visit a  /*  visit a*/ {
+  width: 8rem;
+  height: 8rem;
+  background: #ffd666;
+
+  border: none;
+  border-radius: 3rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: auto;
+  transition: background 200ms;
+  animation-delay: 250ms;
+}
+
+.visit a:hover {
+  background: #96feff;
+}
+
+/* desktop version/responsividade*/
+
+@media (min-width: 760px) /*O mini-width é,
+  largura minima. Isto quer dizer que,
+  somente apartir da dimensão establecida,
+  que neste caso é 760px,
+  é que as regras seguintes,
+  para o tamanho de écran/desktop serão aplicadas*/ {
+  #container {
+    padding: 5rem 2rem;
+    /* shorthand background: image repeat position size */
+    background: url("../images/bg.svg") no-repeat 80% /
+      clamp(30rem, 54vw, 56rem);
+      margin: auto;
+  }
+
+
+header {
+  /*header é o seletor*/
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.location,
+h1,
+.visit p {
+  height: initial;
+  text-align: initial;
+}
+
+
+.location {
+  text-align: right;
+  font-size: 2.4rem;
+  line-height: 1.5; /*altura da linha*/
+}
+
+main h1 {
+  /*Em termos de especificidade este "main h1" é mais forte que "h1" porque seria como calcular "main + h1 que equivaleria a "1(main)+1(h1)=2 contra apenas "h1" que neste caso seria o h1. Contudo, "#h1"( a hashtag[#]representa uma "ID" ) é mais forte que o "main + h1" */
+  /*vw é o mesmo que viewpor=janela de exibição, tamanho total de total de tudo que é visivel na tela*/
+  font-weight: bold; /*negrito*/
+  line-height: 0.88; /*altura da linha*/
+
+  margin: clamp(10%, 9vh, 12%) 0 4rem;
+
+  width: min(300px, 80%);
+
+}
+
+.visit {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.visit p {
+  animation-delay: 200ms;
+}
+
+.visit p /*visit p*/ {
+  font-size: 2.4rem;
+  line-height: 1.5;
+  width: clamp(20rem, /*corresponde a 20px*/ 20vw /*largura da tela*/ 30rem);
+}
+
+.visit a{
+  margin: initial
+}
+
+
+}
+
+
+
+
+
+  
+
+
+

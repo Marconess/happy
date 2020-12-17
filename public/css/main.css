@@ -1,0 +1,42 @@
+/* o que é uma regra css?
+ 
+"body" > seletor
+ {tudo o que vai entre "chaves" são as: declarações.
+     "color:" > é a propriedade. "red" > é o valor 
+
+     (#[1])body 
+         color: red(! important. quando utilizado, é mais forte que outros efeitos de cascata e especifididades);
+     } 
+
+     body {
+         color: gree;
+     }
+    
+}" 
+
+O css é, cascata. isso quer dizer que o ultimo elemento/ordem sera mais forte que a primeira, ou seja: green, foi a ultima cor como ordem. logo sera a cor adotada. Isso, dentro do "css". Especifidade, supera este ultimo: se eu colocar "color: yellow", direto na pagina "html"(exemplo: inserir dentro da tag "<body style="color: yellow>) o "green" sera substituido pelo yellow. Tão forte quanto este ultimo, é todo o coteudo que vai estar dentro de "style", dentro da pagina "html", sim, esta forma anularia o os efeitos da pagina "css" para o referido conteudo.
+
+Contudo existem outras especifidades até mais fortes a serem consideradas, por exemplo [1]"#" antes de declarar no css, o elemento/variavel.
+
+*/
+* {
+  margin: 0; /*margin/borda*/
+  padding: 0; /*Preenchimento*/
+  box-sizing: border-box;
+}
+body {
+  height: 100vh; /*altura*/
+  color: white;
+  background:#ebf2f5; 
+}
+:root {
+  font-size: 52.5%;
+}
+
+body,
+input,
+button,
+textarea { /*area de texto*/
+  font: 400 1.8rem/1 "Nunito", san-serif;
+}
+

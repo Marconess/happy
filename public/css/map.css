@@ -1,0 +1,28 @@
+.map-container {
+    
+    background: #e6f7fb;
+    border: 1px solid #b3dae2;
+    border-radius: 2rem;
+}
+
+#mapid {
+    width: 100%;
+    height: 28rem; 
+}
+
+.map-container footer {
+    padding: 2rem 0;
+
+    text-align: center;
+}
+
+.map-container footer a {
+    color: #0089a5;
+    text-decoration: none; /*por padrao os links vem com uma linha abaixo do texto. Este setor/propriedade, retira a linha.(fazer teste retirando este codigo justtamente para confirmar este detalhe.*/
+    font-weight: 700;
+}
+
+.map-container .leaflet-container {
+    border-bottom: 1px solid #dde3fe;
+    border-radius: 2rem;
+}

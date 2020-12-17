@@ -1,0 +1,46 @@
+@keyframes up { /*keyframes- quadro chave. Este bloco sera responsavel pela animação inicial da pagina, fazendo com que ela apareça gradativament.*/
+    from {
+        opacity: 0;
+        transform: translateY(16px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0); /*o translateY fara alterações no eixo Y, de baixo para cima*/
+    }
+}
+
+@keyframes  right {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.animate-up { /*para conectar esta função com o "index.html" deve-se usar "class="animate-up"*/
+    animation-name: up; /*animation-name é uma propriedade*/
+    animation-duration: 300ms; /*ou "0.9s" o "s" é de "segundos" e o "ms" milesegundos*/
+    animation-fill-mode: backwards; /*backwards tem relação direta com transição do  "opacity*, indo do 0 ao 1 neste caso especifico*/
+}
+
+.animate-right {
+    animation-name: right;
+    animation-duration: 300ms;
+}
+
+.animate-appear {
+    animation-name: appear;
+    animation-duration: 300ms;
+    animation-fill-mode: backwards
+}
